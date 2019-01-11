@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+main,
+section {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+  justify-content: space-around;
+}
+
+section {
+  margin: 100px auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+}
+header {
+  text-align: center;
+  padding: 150px 0 100px;
+}
+header span {
+  color: #ccc;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+header span a {
+  color: #09f;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transition: 0.25s ease;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+.logo.round {
+  border-radius: 40px;
+}
+.logo.round::after {
+  border-radius: 40px;
+}
+.logo#photoshop {
+  color: #00c8ff;
+  background-color: #001d26;
+  transition: 0.25s ease;
+}
+.logo#photoshop:after {
+  border-color: #00c8ff;
+}
+.logo#photoshop:hover {
+  background-color: #002530;
+  box-shadow: inset 0 0 50px 20px rgba(0, 0, 0, 0.9);
+}
+.logo#photoshop:hover::before {
+  transition: 0.7s ease;
+  transform: scale(1.1);
+}
+.logo#illustrator {
+  color: #FF7C01;
+  background-color: #210B00;
+  transition: 0.25s ease;
+}
+.logo#illustrator:after {
+  border-color: #FF7C01;
+}
+.logo#illustrator:hover {
+  background-color: #2b0e00;
+  box-shadow: inset 0 0 50px 20px rgba(0, 0, 0, 0.9);
+}
+.logo#illustrator:hover::before {
+  transition: 0.7s ease;
+  transform: scale(1.1);
+}
+.logo#indesign {
+  color: #FF3F94;
+  background-color: #2E0014;
+  transition: 0.25s ease;
+}
+.logo#indesign:after {
+  border-color: #FF3F94;
+}
+.logo#indesign:hover {
+  background-color: #380018;
+  box-shadow: inset 0 0 50px 20px rgba(0, 0, 0, 0.9);
+}
+.logo#indesign:hover::before {
+  transition: 0.7s ease;
+  transform: scale(1.1);
+}
+.logo#premiere {
+  color: #EA77FF;
+  background-color: #2A0034;
+  transition: 0.25s ease;
+}
+.logo#premiere:after {
+  border-color: #EA77FF;
+}
+.logo#premiere:hover {
+  background-color: #32003e;
+  box-shadow: inset 0 0 50px 20px rgba(0, 0, 0, 0.9);
+}
+.logo#premiere:hover::before {
+  transition: 0.7s ease;
+  transform: scale(1.1);
+}
+.logo#xd {
+  color: #FFDAF3;
+  background-color: #2A0019;
+  transition: 0.25s ease;
+}
+.logo#xd:after {
+  border-color: #FF21BF;
+}
+.logo#xd:hover {
+  background-color: #34001f;
+  box-shadow: inset 0 0 50px 20px rgba(0, 0, 0, 0.9);
+}
+.logo#xd:hover::before {
+  transition: 0.7s ease;
+  transform: scale(1.1);
+}
+.logo#spark {
+  color: #FFD902;
+  background-color: #262000;
+  transition: 0.25s ease;
+}
+.logo#spark:after {
+  border-color: #FFD902;
+}
+.logo#spark:hover {
+  background-color: #302900;
+  box-shadow: inset 0 0 50px 20px rgba(0, 0, 0, 0.9);
+}
+.logo#spark:hover::before {
+  transition: 0.7s ease;
+  transform: scale(1.1);
+}
+.logo::before {
+  transition: 0.25s ease;
+  display: block;
+  content: attr(acron);
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-weight: 700;
+  font-size: 120px;
+  font-family: "Nanum Gothic", sans-serif;
+  letter-spacing: -5px;
+  margin-right: 5px;
+}
+.logo::after {
+  display: block;
+  content: "";
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border: 10px solid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  transition: 0.25s ease;
+}
+.logo:hover::after {
+  box-shadow: 0 0 200px rgba(255, 255, 255, 0.05);
+}
+
+@keyframes pop {
+  50% {
+    transform: scale(1.1);
+  }
+  0%, 100% {
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

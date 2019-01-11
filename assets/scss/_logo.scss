@@ -1,0 +1,95 @@
+$products: (
+  photoshop: (#001d26, #00c8ff),
+  illustrator: (#210B00, #FF7C01),
+  indesign: (#2E0014, #FF3F94),
+  premiere: (#2A0034, #EA77FF),
+  xd: (#2A0019, #FFDAF3, #FF21BF),
+  spark: (#262000, #FFD902),
+);
+
+.logo {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transition: .25s ease;
+  cursor: pointer;
+  margin-bottom: 50px;
+
+  &.round {
+    border-radius: 40px;
+    &::after {
+      border-radius: 40px;
+    }
+  }
+
+  @each $product, $colors in $products {
+    $length: length($colors);
+    $bg: nth($colors, 1);
+    $color: nth($colors, 2);
+    $border: nth($colors, $length);
+
+    &##{$product} {
+      color: $color;
+      background-color: $bg;
+      transition: .25s ease;
+      
+      &:after {
+        border-color: $border;
+      }
+      &:hover {
+        background-color: lighten($bg, 2%);
+        box-shadow: inset 0 0 50px 20px rgba(#000, .9);
+        &::before {
+          transition: .7s ease;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &::before {
+    transition: .25s ease;
+    display: block;
+    content: attr(acron);
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+    font-weight: 700;
+    font-size: 120px;
+    font-family: 'Nanum Gothic', sans-serif;
+    letter-spacing: -5px;
+    margin-right: 5px;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    display: flex;
+    height: 100%;
+    width: 100%;
+    
+    border: 10px solid;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    transition: .25s ease;
+  }
+
+  &:hover::after {
+    box-shadow: 0 0 200px rgba(#fff, .05);
+  }
+}
+
+@keyframes pop {
+  50% {
+    transform: scale(1.1);
+  }
+  0%, 100% {
+    transform: scale(1);
+  }
+}
+
