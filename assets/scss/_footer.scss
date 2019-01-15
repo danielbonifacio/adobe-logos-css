@@ -3,10 +3,16 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 30px;
-  background-color: #fff;
+  height: 60px;
+  background-image: linear-gradient(to right, #ff21bf, #ff7c01);
+  z-index: 10;
+  text-align: center;
+  line-height: 60px;
+  box-shadow: 0 0 200px rgba(#ff7c01, .3);
 
   a {
-    
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3em;
   }
 }
